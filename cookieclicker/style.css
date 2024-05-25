@@ -410,6 +410,8 @@ oh forget it this is just a mess
 {color:#6ad3ff;}
 #topBar a.lightblueLink:hover
 {color:#74fffd;text-shadow:0px 0px 3px #6ad3ff;}
+#topBar a.purplelink
+{color:#9317d1;}
 a.orangeLink,#topBar a.orangeLink
 {color:#f65f4d;}
 a.orangeLink:hover,#topBar a.orangeLink:hover

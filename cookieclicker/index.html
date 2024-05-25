@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <script type="text/javascript">
-    window.cookieconsent_options = {"message":"Unsurprisingly, this website uses cookies for ads and traffic analysis.","dismiss":"Got it!","learnMore":"Learn more","link":"http://orteil.dashnet.org/cookieconsentpolicy.html","target":"_blank","theme":"http://orteil.dashnet.org/cookieconsent.css","domain":"dashnet.org"};
+    window.cookieconsent_options = {"message":"Unsurprisingly, this website uses cookies for ads and traffic analysis.","dismiss":"Got it!","learnMore":"Learn more","link":"//orteil.dashnet.org/cookieconsentpolicy.html","target":"_blank","theme":"//orteil.dashnet.org/cookieconsent.css","domain":"dashnet.org"};
 </script>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
 <title>Cookie Clicker</title>
 <!--
-Code and graphics copyright Orteil, 2013-2019
+Code and graphics copyright Orteil, 2013-2021
 Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
 -->
 
@@ -19,7 +20,7 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 <link href='https://fonts.googleapis.com/css?family=Merriweather:900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <script src="showads.js"></script><!-- this just detects adblockers so we can adjust the layout and play nice -->
 <script src="base64.js"></script>
-<script src="main.js?v=2.058"></script>
+<script src="main.js?v=2.091"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({
@@ -27,7 +28,7 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
           enable_page_level_ads: true
      });
 </script>
-<link href="style.css?v=2.050" rel="stylesheet" type="text/css">
+<link href="style.css?v=2.053" rel="stylesheet" type="text/css">
 <!--[if IE]>
 <style type="text/css">
 	#ifIE9{display:block;}
@@ -35,31 +36,65 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 <![endif]-->
 
 <!--[if lt IE9]><script src="excanvas.compiled.js"></script><![endif]-->
-
+<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '357399801355203');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=357399801355203&ev=PageView&noscript=1"></noscript>
+<!-- end code -->
 </head>
 <body>
-
 <div id="wrapper">
 
 	<div id="topBar">
-		<div><b>Cookie Clicker</b>&trade; &copy; <a href="http://orteil.dashnet.org" target="_blank" id="topbarOrteil">Orteil</a>, 2019 - <a href="http://dashnet.org" target="_blank" id="topbarDashnet">DashNet</a></div>
-		<div><a href="http://twitter.com/orteil42" target="_blank" id="topbarTwitter">twitter</a></div>
-		<div><a href="http://orteil42.tumblr.com" target="_blank" id="topbarTumblr">tumblr</a></div>
-		<!--<div><a href="http://forum.dashnet.org" target="_blank">Official forum</a></div>-->
+		<div><b>Cookie Clicker</b>&trade; &copy; <a href="//orteil.dashnet.org" target="_blank" id="topbarOrteil">Orteil</a>, 2021 - <a href="//dashnet.org" target="_blank" id="topbarDashnet">DashNet</a></div>
+		<div><a href="https://twitter.com/orteil42" target="_blank" id="topbarTwitter">twitter</a></div>
+		<div><a href="https://orteil42.tumblr.com" target="_blank" id="topbarTumblr">tumblr</a></div>
 		<div style="position:relative;"><div style="width:22px;height:32px;background:url(img/discord.png);position:absolute;left:0px;top:0px;pointer-events:none;"></div><a href="https://discordapp.com/invite/cookie" target="_blank" style="padding-left:16px;" id="topbarDiscord">Discord</a></div>
 		<div style="position:relative;"><div style="width:25px;height:32px;background:url(img/weeHoodie.png);position:absolute;left:-2px;top:0px;pointer-events:none;"></div><a class="blueLink" href="http://www.redbubble.com/people/dashnet" target="_blank" style="padding-left:12px;" id="topbarMerch">Merch!</a></div>
 		<div style="position:relative;"><div style="width:22px;height:32px;background:url(img/patreon.png);position:absolute;left:0px;top:0px;pointer-events:none;"></div><a class="orangeLink" href="https://www.patreon.com/dashnet" target="_blank" style="padding-left:16px;" id="topbarPatreon">Patreon</a></div>
 		<div style="position:relative;display:none;font-weight:bold;" id="heralds"><div style="position:absolute;top:-4px;width:31px;height:39px;background:url(img/heraldFlag.png);left:50%;margin-left:-15px;pointer-events:none;"></div><div id="heraldsAmount" style="position:relative;z-index:10;text-shadow:0px 1px 0px #000,0px 0px 6px #ff00e4;color:#fff;">-</div></div>
 		<div><a class="lightblueLink" style="font-weight:bold;" href="https://play.google.com/store/apps/details?id=org.dashnet.cookieclicker" target="_blank" id="topbarMobileCC">Cookie Clicker for Android</a></div>
-		<div><a href="http://orteil.dashnet.org/randomgen/" target="_blank" id="topbarRandomgen">RandomGen</a></div>
-		<div><a href="http://orteil.dashnet.org/igm/" target="_blank" id="topbarIGM">Idle Game Maker</a></div>
+		<div><a class="lightblueLink" style="font-weight:bold;" href="https://store.steampowered.com/app/1454400/Cookie_Clicker/" target="_blank" id="topbarSteamCC">Cookie Clicker on Steam</a></div>
+		<div><a href="http://Sushi8756.github.io/Cookie-Clicker-Guide/" target="_blank" id="topbarRandomgen">Guide</a></div>
+		<div><a class="purplelink" href="https://www.youtube.com/channel/UCP99woj07psKFyMQN56zMdg" target="_blank" id="topbarIGM">Sushi8756</a></div>
+		<div style="position:relative;"><div style="width:26px;height:31px;background:url(img/update.png);position:absolute;left:0px;top:0px;pointer-events:none;"></div><a href="https://github.com/Sushi8756/Cookie-Clicker-2.031" target="_blank" style="padding-left:-3px;" id="topbarUpdate">█</a></div>
 		<div id="links" class="hoverer">
 			Other versions
 			<div class="hoverable">
-			<a href="../" target="_blank" id="linkVersionLive">Live version</a>
-			<a href="beta" target="_blank" id="linkVersionBeta">Try the beta!</a>
-			<a href="http://orteil.dashnet.org/cookieclicker/v10466" target="_blank" id="linkVersionOld">v. 1.0466</a>
-			<a href="http://orteil.dashnet.org/experiments/cookie/" target="_blank">Classic</a>
+			<!-- This one doesnt show for some reason :/ --> <a href="https://wackube.github.io/Cookie_Clicker/" target="_blank" id="linkVersionLive">v. 2.031</a>
+			<a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Official Site</a>
+			<a href="https://wackube.github.io/Cookie_Clicker/" target="_blank" id="linkVersionBeta">v. 2.031 site 1</a>
+			<a href="http://ozh.github.io/cookieclicker/" target="_blank">v. 2.031 site 2</a>
+			<a href="https://funneljai212.github.io/cookie-clicker-source-code-1/" target="_blank">v. 2.031 site 3</a>
+			<a href="https://xenogames224.github.io/cookieclickerxeno/" target="_blank" id="linkVersionOld">v. 2.022</a>
+			<a href="https://trixter9994.github.io/Cookie-Clicker-Source-Code/" target="_blank">v. 2.021 beta site 1</a>
+			<a href="https://3kh0.github.io/cookie-clicker/" target="_blank">v. 2.021 beta site 2</a>
+			<a href="https://wolfy01.github.io/Cookie-Clicker/" target="_blank">v. 2.0042</a>
+			<a href="https://eli-schwartz.github.io/cookieclicker/" target="_blank">v. 1.0411</a>
+			<!-- <a href="LINK" target="_blank">NAME</a> -->
+			</div>
+		</div>
+			<div style="
+			    display: block;
+			    position: absolute;
+			    right: 99px;
+			    top: 0px;
+			    z-index: 10000000;
+			    float: none;
+			" class="hoverer">
+			Mods/Addons
+			<div class="hoverable">
+			<a href="javascript: (function () {Game.LoadMod('https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js');}());" id="linkVersionBeta">Cookie Monster</a>
+			<a href="javascript: (function () {Game.LoadMod('https://klattmose.github.io/CookieClicker/KlattmoseUtilities.js?v=2.16');}());" id="linkVersionOld">Klattmose's Utilities</a>
+			<a href="addons.html" target="_blank">More Addons</a>
 			</div>
 		</div>
 	</div>
@@ -69,8 +104,8 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 			<div id="loader">
 				<div class="spinnyBig"></div>
 				<div class="spinnySmall"></div>
-				<div id="loading" class="title">Loading...</div>
-				<div id="failedToLoad" class="title">This is taking longer than expected.<br>
+				<div id="loading" class="title">It Loading...</div>
+				<div id="failedToLoad" class="title">This is taking too much long.<br>
 				<div style="font-size:65%;line-height:120%;">Slow connection? If not, please make sure your javascript is enabled, then refresh.<br>
 				If problems persist, this might be on our side - wait a few minutes, then hit ctrl+f5!</div></div>
 				<div id="ifIE9" class="title" style="font-size:100%;line-height:120%;">Your browser may not be recent enough to run Cookie Clicker.<br>You might want to update, or switch to a more modern browser such as Chrome or Firefox.</div>
@@ -149,6 +184,50 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 		</div>
 
 		<div id="sectionRight" class="inset">
+			<!-- <audio autoplay loop id="audio1">
+			  <source src="frogMenu.mp3">
+			Your browser does not support the audio element.
+			</audio>
+			<audio autoplay loop id="audio2">
+			  <source src="beach.mp3">
+			Your browser does not support the audio element.
+			</audio>
+			<button onclick="setHalfVolume()" type="button">0.2</button>
+			<button onclick="setFullVolume()" type="button">1.0</button>
+			<script>
+			function ee(){
+				var random= Math.floor(Math.random() * 9) + 0;
+				var audios = ["audio1", "audio2"]
+				var audio = document.getElementbyId(audios[random]);
+				audio.volume = 1;
+			}
+			function randomMusic() {
+					var random= Math.floor(Math.random() * 2) + 0;
+					var eee = ["beach.mp3", "frogMenu.mp3"]
+					const music = new Audio(eee[random]);
+					music.play();
+					music.loop =false;
+					music.playbackRate = 1;
+
+			}
+			
+
+			function getVolume() { 
+			  alert(audio.volume);
+			} 
+			  
+			function setHalfVolume() { 
+			  audio.volume = 0.2;
+			} 
+			  
+			function setFullVolume() { 
+			  audio.volume = 1.0;
+			} 
+			</script>
+			-->
+			<div style="width:300px;text-align:center;padding:8px 0px;background:rgba(0,0,0,0.95);font-size:15px;opacity:0.5;text-shadow:0px 0px 2px #000,0px 1px 0px #000;text-align:center;">
+				Version 1.0.0
+			</div>
 			<div class="ifNoAds" style="width:300px;text-align:center;padding:8px 0px;background:rgba(0,0,0,0.95);font-size:10px;opacity:0.5;text-shadow:0px 0px 2px #000,0px 1px 0px #000;text-align:center;">
 				Cookie Clicker is mainly supported by ads.<br>Consider unblocking our site or checking out our <a href="https://www.patreon.com/dashnet" target="_blank">Patreon</a>!
 			</div>
@@ -156,7 +235,7 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 				
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<!-- Cookie Clicker Header Responsive -->
-				<ins class="adsbygoogle"
+					<!--<ins class="adsbygoogle"
 					 style="display:block;margin:auto;width:300px;max-height:300px;overflow:hidden;"
 					 data-ad-client="ca-pub-8491708950677704"
 					 data-ad-slot="7077525342"
@@ -166,7 +245,7 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
 				
-				<div class="supportComment">^ Sponsored link ^</div>
+				<div class="supportComment">^ Sponsored link ^</div>-->
 			</div>
 			<div id="store">
 				<div id="storeTitle" class="inset title zoneTitle">Store</div>
@@ -179,13 +258,34 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 			
 			<div id="detectAds" class="adBanner" style="background:transparent;width:1px;height:1px;"></div>
 			<div id="support" style="margin-top:130px;">
-				<div class="supportComment">v Sponsored links v</div>
+				<!-- <div class="supportComment">v Sponsored links v</div> -->
 				<div style="position:relative;">
-				
+			<script>
+			function loadMod() {
+			  /* Get the text field */
+			  var copyText = document.getElementById("modLoader");
+			
+			  /* Select the text field */
+			  copyText.select();
+			  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+			 
+			  /* Sends you to the link */
+			  window.location.href = copyText.value;
+			}
+			</script>
+			<!-- The button used to copy the text -->
+			<button onclick="loadMod()">Load</button>
+			<!-- The text field -->
+			<input style="position= absolute;" type="text" value="" id="modLoader">
+			<!-- The text field -->
+			<br>
+			<div style="width:300px;text-align:center;padding:8px 0px;background:rgba(0,0,0,0);font-size:15px;opacity:0.5;text-shadow:0px 0px 2px #000,0px 1px 0px #000;text-align:center;">
+				Paste a bookmark addon into here<br>and press the button to load the mod.<br>DONT DO A LINK! Or you will leave the site.
+			</div>
 					<div style="position:relative;z-index:100;min-height:250px;">
-					
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- Cookie Clicker Responsive -->
+
+						<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						Cookie Clicker Responsive
 						<ins class="adsbygoogle"
 							 style="display:block;margin:auto;"
 							 data-ad-client="ca-pub-8491708950677704"
@@ -198,9 +298,9 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 						
 						<div style="height:16px;"></div>
 						
-						<!-- AdventureQuest Worlds banner -->
+						AdventureQuest Worlds banner
 						<a class="ad" id="aqad" href="http://www.aq.com/landing/cookie/?utm_campaign=AQW_CookieClicker&utm_source=CookieClicker" target="_blank" title="AdventureQuest Worlds" style="background:url(img/aqworldsbanner.jpg) no-repeat;width:300px;height:64px;display:block;position:relative;margin:0px auto;">
-						</a>
+						</a> -->
 						
 					</div>
 					
@@ -225,6 +325,5 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
 	</div>
 
 </div>
-
 </body>
 </html>
